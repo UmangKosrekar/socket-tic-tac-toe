@@ -1,5 +1,4 @@
 require("dotenv").config("../.env");
-const functions = require("firebase-functions");
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -15,5 +14,3 @@ server.listen(port, () => {
 });
 
 require("./socket")(server);
-
-exports.api = functions.https.onRequest(server);
